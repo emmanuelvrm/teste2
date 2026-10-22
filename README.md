@@ -2,7 +2,7 @@
 
 Um site estático feito com HTML, CSS e JavaScript.
 
-**Site publicado:** (preencha depois de publicar no GitHub Pages)
+**Site publicado:** https://emmanuelvrm.github.io/teste2/
 
 ## Como ver no seu computador
 

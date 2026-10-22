@@ -68,7 +68,7 @@
       <div class="container">
         <h2 id="titulo-tarefas">Lista de tarefas</h2>
         <p>Exemplo de JavaScript: adicione, conclua e remova itens. Eles ficam salvos neste navegador.</p>
-        <form class="tarefas__form" data-tarefas-form novalidate>
+        <form data-api="tarefas" class="tarefas__form" data-tarefas-form novalidate>
           <label for="nova-tarefa">Nova tarefa</label>
           <input id="nova-tarefa" name="tarefa" type="text" autocomplete="off" required maxlength="80">
           <button class="botao" type="submit">Adicionar</button>
@@ -85,5 +85,6 @@
       <p>&copy; <span data-ano>2026</span> Meu Site. Feito com HTML, CSS e JavaScript.</p>
     </div>
   </footer>
+  <script src="js/api.js" defer></script>
 </body>
 </html>

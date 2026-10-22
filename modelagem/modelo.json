@@ -1,0 +1,111 @@
+{
+  "tabelas": [
+    {
+      "nome": "mensagens",
+      "colunas": [
+        {
+          "nome": "id",
+          "tipo": "INTEGER",
+          "pk": true
+        },
+        {
+          "nome": "nome",
+          "tipo": "TEXT"
+        },
+        {
+          "nome": "email",
+          "tipo": "TEXT"
+        },
+        {
+          "nome": "mensagem",
+          "tipo": "TEXT"
+        },
+        {
+          "nome": "criado_em",
+          "tipo": "DATETIME"
+        }
+      ]
+    },
+    {
+      "nome": "tarefas",
+      "colunas": [
+        {
+          "nome": "id",
+          "tipo": "INTEGER",
+          "pk": true,
+          "nn": true
+        },
+        {
+          "nome": "tarefa",
+          "tipo": "TEXT"
+        },
+        {
+          "nome": "criado_em",
+          "tipo": "DATETIME"
+        },
+        {
+          "nome": "concluida",
+          "tipo": "BOOLEAN"
+        },
+        {
+          "nome": "usuario_id",
+          "tipo": "INTEGER",
+          "fk": {
+            "tabela": "usuarios",
+            "coluna": "id"
+          }
+        }
+      ]
+    },
+    {
+      "nome": "tabela2",
+      "colunas": [
+        {
+          "nome": "id",
+          "tipo": "INTEGER",
+          "pk": true
+        },
+        {
+          "nome": "tarefa_id",
+          "tipo": "INTEGER",
+          "fk": {
+            "tabela": "tarefas",
+            "coluna": "id"
+          }
+        },
+        {
+          "nome": "descricao",
+          "tipo": "TEXT"
+        }
+      ],
+      "x": 584,
+      "y": 118
+    },
+    {
+      "nome": "usuarios",
+      "colunas": [
+        {
+          "nome": "id",
+          "tipo": "INTEGER",
+          "pk": true
+        },
+        {
+          "nome": "nome",
+          "tipo": "TEXT"
+        },
+        {
+          "nome": "email",
+          "tipo": "TEXT"
+        },
+        {
+          "nome": "senha_hash",
+          "tipo": "TEXT"
+        },
+        {
+          "nome": "criado_em",
+          "tipo": "DATETIME"
+        }
+      ]
+    }
+  ]
+}

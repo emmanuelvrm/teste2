@@ -40,7 +40,7 @@
       <div class="container texto-largo">
         <h1>Contato</h1>
         <p>Preencha o formulário. Neste exemplo nada é enviado: o site é estático e não tem servidor.</p>
-        <form class="form" data-contato-form novalidate>
+        <form data-api="mensagens" class="form" data-contato-form novalidate>
           <div class="campo">
             <label for="nome">Nome</label>
             <input id="nome" name="nome" type="text" autocomplete="name" required minlength="3">
@@ -68,5 +68,6 @@
       <p>&copy; <span data-ano>2026</span> Meu Site. Feito com HTML, CSS e JavaScript.</p>
     </div>
   </footer>
+  <script src="js/api.js" defer></script>
 </body>
 </html>
