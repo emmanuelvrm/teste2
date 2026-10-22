@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato | Meu Site</title>
+  <meta name="description" content="Entre em contato: formulário com validação em JavaScript.">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:title" content="Contato | Meu Site">
+  <meta property="og:description" content="Entre em contato: formulário com validação em JavaScript.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <script src="js/main.js" type="module"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="index.html">Meu Site</a>
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-botao>
+        <span class="menu-botao__icone" aria-hidden="true"></span>
+        <span class="menu-botao__texto">Menu</span>
+      </button>
+      <nav class="menu" id="menu-principal" aria-label="Principal" data-menu>
+        <ul class="menu__lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="tema-botao" type="button" aria-pressed="false" data-tema-botao>Tema escuro</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="secao">
+      <div class="container texto-largo">
+        <h1>Contato</h1>
+        <p>Preencha o formulário. Neste exemplo nada é enviado: o site é estático e não tem servidor.</p>
+        <form class="form" data-contato-form novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required minlength="3">
+            <p class="erro" id="erro-nome" role="alert" hidden></p>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <p class="erro" id="erro-email" role="alert" hidden></p>
+          </div>
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required minlength="10"></textarea>
+            <p class="erro" id="erro-mensagem" role="alert" hidden></p>
+          </div>
+          <button class="botao" type="submit">Enviar</button>
+          <p class="sucesso" role="status" data-contato-status hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; <span data-ano>2026</span> Meu Site. Feito com HTML, CSS e JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>

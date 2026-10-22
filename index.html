@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início | Meu Site</title>
+  <meta name="description" content="Um site estático feito com HTML, CSS e JavaScript.">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:title" content="Início | Meu Site">
+  <meta property="og:description" content="Um site estático feito com HTML, CSS e JavaScript.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <script src="js/main.js" type="module"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="index.html">Meu Site</a>
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-botao>
+        <span class="menu-botao__icone" aria-hidden="true"></span>
+        <span class="menu-botao__texto">Menu</span>
+      </button>
+      <nav class="menu" id="menu-principal" aria-label="Principal" data-menu>
+        <ul class="menu__lista">
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="tema-botao" type="button" aria-pressed="false" data-tema-botao>Tema escuro</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="heroi">
+      <div class="container">
+        <h1>Meu Site</h1>
+        <p class="heroi__texto">Um site estático feito com HTML, CSS e JavaScript.</p>
+        <p><a class="botao" href="contato.html">Fale comigo</a> <a class="botao botao--contorno" href="sobre.html">Conheça o projeto</a></p>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="titulo-destaques">
+      <div class="container">
+        <h2 id="titulo-destaques">Destaques</h2>
+        <div class="grade">
+          <article class="cartao">
+            <h3>Rápido</h3>
+            <p>Páginas leves, sem bibliotecas desnecessárias.</p>
+          </article>
+          <article class="cartao">
+            <h3>Responsivo</h3>
+            <p>Funciona em celular, tablet e computador.</p>
+          </article>
+          <article class="cartao">
+            <h3>Acessível</h3>
+            <p>Teclado, leitores de tela e bom contraste.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--alt" aria-labelledby="titulo-tarefas">
+      <div class="container">
+        <h2 id="titulo-tarefas">Lista de tarefas</h2>
+        <p>Exemplo de JavaScript: adicione, conclua e remova itens. Eles ficam salvos neste navegador.</p>
+        <form class="tarefas__form" data-tarefas-form novalidate>
+          <label for="nova-tarefa">Nova tarefa</label>
+          <input id="nova-tarefa" name="tarefa" type="text" autocomplete="off" required maxlength="80">
+          <button class="botao" type="submit">Adicionar</button>
+          <p class="erro" id="erro-tarefa" role="alert" hidden></p>
+        </form>
+        <ul class="tarefas" data-tarefas-lista aria-live="polite"></ul>
+        <p class="vazio" data-tarefas-vazio>Nenhuma tarefa ainda.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; <span data-ano>2026</span> Meu Site. Feito com HTML, CSS e JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>

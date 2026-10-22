@@ -1,0 +1,105 @@
+/* Base: reset leve, tipografia e layout geral. Usa só as variáveis de tokens.css. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-base);
+  font-size: var(--texto-p);
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+  margin: 0 0 var(--espaco-3);
+}
+
+h1 {
+  font-size: var(--texto-xg);
+}
+
+h2 {
+  font-size: var(--texto-g);
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+p,
+ul {
+  margin: 0 0 var(--espaco-3);
+}
+
+a {
+  color: var(--cor-primaria);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--cor-destaque);
+}
+
+:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(100% - 2rem, var(--largura-max));
+  margin-inline: auto;
+}
+
+.texto-largo {
+  max-width: 44rem;
+}
+
+.pular {
+  position: absolute;
+  left: var(--espaco-3);
+  top: -4rem;
+  padding: var(--espaco-2) var(--espaco-3);
+  background: var(--cor-primaria);
+  color: var(--cor-sobre-primaria);
+  border-radius: var(--raio);
+  z-index: 10;
+}
+
+.pular:focus {
+  top: var(--espaco-2);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

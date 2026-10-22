@@ -1,0 +1,255 @@
+/* Componentes: topo, menu, botões, cartões, formulário, tarefas. Mobile first. */
+.topo {
+  background: var(--cor-superficie);
+  border-bottom: 1px solid var(--cor-borda);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.topo__linha {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espaco-2);
+  padding-block: var(--espaco-2);
+}
+
+.marca {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+.menu-botao,
+.tema-botao {
+  font: inherit;
+  min-height: 2.75rem;
+  padding: 0 var(--espaco-3);
+  color: var(--cor-texto);
+  background: transparent;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  cursor: pointer;
+}
+
+.menu-botao:hover,
+.tema-botao:hover {
+  border-color: var(--cor-primaria);
+}
+
+.menu {
+  flex-basis: 100%;
+  display: none;
+}
+
+.menu.aberto {
+  display: block;
+}
+
+.menu__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--espaco-1);
+}
+
+.menu__lista a {
+  display: block;
+  padding: var(--espaco-2) var(--espaco-3);
+  border-radius: var(--raio);
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+.menu__lista a:hover,
+.menu__lista a[aria-current="page"] {
+  background: var(--cor-primaria);
+  color: var(--cor-sobre-primaria);
+}
+
+.botao {
+  display: inline-block;
+  min-height: 2.75rem;
+  padding: 0.65rem 1.25rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--cor-sobre-primaria);
+  background: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+  border-radius: var(--raio);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao:hover {
+  color: var(--cor-sobre-primaria);
+  filter: brightness(1.1);
+}
+
+.botao--contorno {
+  background: transparent;
+  color: var(--cor-primaria);
+}
+
+.botao--contorno:hover {
+  color: var(--cor-primaria);
+  background: var(--cor-superficie);
+}
+
+.heroi {
+  padding-block: var(--espaco-5);
+  background: var(--cor-superficie);
+}
+
+.heroi__texto {
+  font-size: 1.2rem;
+  max-width: 40rem;
+  color: var(--cor-texto-suave);
+}
+
+.secao {
+  padding-block: var(--espaco-5);
+}
+
+.secao--alt {
+  background: var(--cor-superficie);
+}
+
+.grade {
+  display: grid;
+  gap: var(--espaco-3);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.cartao {
+  padding: var(--espaco-4);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+}
+
+.secao--alt .cartao {
+  background: var(--cor-fundo);
+}
+
+.form,
+.tarefas__form {
+  display: grid;
+  gap: var(--espaco-3);
+  max-width: 36rem;
+}
+
+.campo {
+  display: grid;
+  gap: var(--espaco-1);
+}
+
+label {
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-texto-suave);
+  border-radius: var(--raio);
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: var(--cor-erro);
+  border-width: 2px;
+}
+
+.erro {
+  margin: 0;
+  color: var(--cor-erro);
+  font-weight: 600;
+}
+
+.sucesso {
+  margin: 0;
+  color: var(--cor-sucesso);
+  font-weight: 600;
+}
+
+.tarefas {
+  list-style: none;
+  padding: 0;
+  margin: var(--espaco-4) 0 var(--espaco-3);
+  display: grid;
+  gap: var(--espaco-2);
+  max-width: 36rem;
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-2);
+  padding: var(--espaco-2) var(--espaco-3);
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.tarefa__texto {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+.tarefa--feita .tarefa__texto {
+  text-decoration: line-through;
+  color: var(--cor-texto-suave);
+}
+
+.tarefa__remover {
+  font: inherit;
+  min-height: 2.75rem;
+  padding: 0 var(--espaco-3);
+  color: var(--cor-erro);
+  background: transparent;
+  border: 1px solid var(--cor-erro);
+  border-radius: var(--raio);
+  cursor: pointer;
+}
+
+.vazio {
+  color: var(--cor-texto-suave);
+}
+
+.rodape {
+  padding-block: var(--espaco-4);
+  border-top: 1px solid var(--cor-borda);
+  color: var(--cor-texto-suave);
+}
+
+/* A partir de 48em (tablet): menu sempre visível, em linha. */
+@media (min-width: 48em) {
+  .menu-botao {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    flex-basis: auto;
+    margin-left: auto;
+  }
+
+  .menu__lista {
+    display: flex;
+  }
+
+  .secao {
+    padding-block: 4.5rem;
+  }
+}

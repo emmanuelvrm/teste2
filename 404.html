@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página não encontrada | Meu Site</title>
+  <meta name="description" content="A página que você procura não existe.">
+  <meta name="theme-color" content="#2563eb">
+  <meta property="og:title" content="Página não encontrada | Meu Site">
+  <meta property="og:description" content="A página que você procura não existe.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <script src="js/main.js" type="module"></script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topo">
+    <div class="container topo__linha">
+      <a class="marca" href="index.html">Meu Site</a>
+      <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-botao>
+        <span class="menu-botao__icone" aria-hidden="true"></span>
+        <span class="menu-botao__texto">Menu</span>
+      </button>
+      <nav class="menu" id="menu-principal" aria-label="Principal" data-menu>
+        <ul class="menu__lista">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="tema-botao" type="button" aria-pressed="false" data-tema-botao>Tema escuro</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="secao">
+      <div class="container texto-largo">
+        <h1>Página não encontrada</h1>
+        <p>O endereço que você abriu não existe. Volte para o <a href="index.html">início</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>&copy; <span data-ano>2026</span> Meu Site. Feito com HTML, CSS e JavaScript.</p>
+    </div>
+  </footer>
+</body>
+</html>
